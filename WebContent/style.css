@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+/****** 共通 */
+
+/* 全タグへ適用 */
+* {
+	/* 外部余白 */
+	margin: 0;
+	/* 内部余白 */
+	padding: 0;
+	/* フォント */
+	font-family: "メイリオ";
+}
+
+/****** 基礎 */
+#wrap {
+
+}
+
+/****** ヘッダー */
+#header {
+	/* 高さ */
+	height: 40px;
+	/* 内部余白 */
+	padding: 5px 10px 10px 20px;
+	/* フォントサイズ */
+	font-size: 150%;
+	/* 文字色 */
+	color: #eee;
+	/* 背景色 */
+	background: #000;
+}
+
+/****** メインコンテンツ */
+#main {
+	/* 幅 */
+	width: 100%;
+	/* 高さ */
+	min-height: 650px;
+	/* 内部余白 */
+	padding: 20px 0;
+}
+
+#content {
+	/* 幅 */
+	width: 70%;
+	/* 外部余白 */
+	margin: 0 auto;
+	/* 枠線 */
+	border: 1px dashed #333;
+	/* 文字色 */
+	color: #333;
+	/* 背景色 */
+	background-color: #fff;
+}
+
+/* float解除用 */
+#content:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#menu {
+	/* 表示形式 */
+	float: left;
+	/* 幅 */
+	width: 25%;
+	/* 内部余白 */
+	padding-top: 10px;
+	/* 文字表示 */
+	text-align: center;
+}
+
+#profile {
+	/* 表示形式 */
+	float: left;
+	/* 幅 */
+	width: 75%;
+	/* 内部余白 */
+	padding: 10px 0;
+}
+
+/* float解除用 */
+#profile:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#image {
+	/* 表示形式 */
+	float: left;
+	/* 幅 */
+	width: 50%;
+	height: 280px;
+	position: 200px 10px;
+}
+
+#table {
+	/* 外部余白 */
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+/* float解除用 */
+#free_comment:before {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#free_comment {
+	/* 外部余白 */
+	margin: 10px;
+	/* 内部余白 */
+	padding: 7px;
+	/* 枠線 */
+	border: 5px double #eff5ff;
+	/* 文字色 */
+	color: #19243D;
+	/* 背景色 */
+	background-color: #F4F8FC;
+	/* 枠線角丸 */
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#footer {
+	/* 高さ */
+	min-height: 50px;
+	/* 文字色 */
+	color: #fff;
+	/* 文字表示 */
+	text-align: center;
+	/* 背景色 */
+	background: #000; /* Old browsers */
+}
+
+/****** 見出し */
+h1 {
+	/* フォントサイズ */
+	font-size: 26px;
+}
+
+h2 {
+	/* 表示形式 */
+	position: relative;
+	/* 外部余白 */
+	margin: 20px 0;
+	/* 内部余白 */
+	padding-left: 20px;
+	/* 枠線 */
+	border-bottom: 2px solid #ccc;
+	/* 文字装飾 */
+	font-weight: bold;
+	/* フォントサイズ */
+	font-size: 22px;
+	/* 行高さ */
+	line-height: 38px;
+}
+
+h2:before {
+	content: '';
+	height: 12px;
+	width: 12px;
+	display: block;
+	background: #00A8FF;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	-webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	-moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	position: absolute;
+	top: -0px;
+	left: 5px;
+	transform: rotate(-50deg);
+	-webkit-transform: rotate(-50deg);
+	-moz-transform: rotate(-50deg);
+	-o-transform: rotate(-50deg);
+	-ms-transform: rotate(-50deg);
+}
+
+h2:after {
+	content: '';
+	height: 8px;
+	width: 6px;
+	display: block;
+	background: #00A8FF;
+	box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	-webkit-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	-moz-box-shadow: 0 0 5px rgba(255, 255, 255, 0.3) inset;
+	position: absolute;
+	top: 16px;
+	left: 2px;
+	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-75deg);
+}
+
+/****** リンク */
+a {
+	/* 文字色 */
+	color: #307FD3;
+	/* 文字装飾 */
+	text-decoration: none;
+}
+
+#header a {
+	/* 文字色 */
+	color: #fff;
+}
+
+.link {
+	/* 表示形式 */
+	position: relative;
+	/* 外部余白 */
+	margin: 0 auto;
+	/* 内部余白 */
+	padding-left: 30px;
+	/* 行高さ */
+	line-height: 38px;
+	/* 枠線 */
+	border-bottom: 2px solid #ccc;
+	/* 文字色 */
+	color: #307FD3;
+	/* 文字装飾 */
+	font-weight: bold;
+}
+
+.active:before {
+	content: '';
+	/* 表示形式 */
+	display: block;
+	position: absolute;
+	/* 表示位置 */
+	top: 11px;
+	left: 8px;
+	/* 幅 */
+	width: 0;
+	/* 高さ */
+	height: 0;
+	/* 枠線 */
+	border: 5px transparent solid;
+	border-right-width: 0;
+	border-left-color: #00A8FF;
+}
+
+.active:after {
+	content: '';
+	/* 表示形式 */
+	display: block;
+	position: absolute;
+	/* 表示位置 */
+	top: 15px;
+	left: 0px;
+	/* 幅 */
+	width: 10px;
+	/* 高さ */
+	height: 2px;
+	/* 背景色 */
+	background: #00A8FF;
+}
+
+/****** 画像 */
+img {
+	/* 表示形式 */
+	display: block;
+	/* 外部余白 */
+	margin: auto;
+}
+
+/****** フォーム */
+input[type="text"] {
+	/* 幅 */
+	width: 100px;
+	/* 外部余白 */
+	margin-right: 5px;
+	/* 内部余白 */
+	padding: 3px 0;
+	/* 枠線 */
+	border: 1px dotted #777;
+	/* 文字色 */
+	color: #111;
+	/* 背景色 */
+	background: #fff;
+}
+
+input[type="button"] {
+	/* 内部余白 */
+	padding: 3px;
+	/* 枠線 */
+	border: 2px solid #CCC;
+	/* 文字色 */
+	color: #111;
+	/* 背景色 */
+	background: #EEE;
+}
+
+/****** テーブル */
+table {
+	/* 枠線 */
+	border-collapse: collapse;
+	border-right: 1px solid #999;
+}
+
+table th {
+	/* 内部余白 */
+	padding: 10px;
+	/* 枠線 */
+	border-top: 1px solid #fff;
+	/* 文字色 */
+	color: #fff;
+	/* 文字表示 */
+	text-align: left;
+	vertical-align: top;
+	/* 背景色 */
+	background-color: #555;
+}
+
+table td {
+	/* 内部余白 */
+	padding: 6px;
+	/* 枠線 */
+	border: 1px solid #999;
+	/* 背景色 */
+	background-color: #fff;
+}
+table2{
+	/* 枠線 */
+	border-collapse: collapse;
+	border-right: 1px solid #999;
+}

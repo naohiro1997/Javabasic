@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE logback>
+<configuration>
+
+	<!-- logを標準出力に出力 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- ターゲットを標準出力へ -->
+		<Target>System.out</Target>
+		<!-- パターンレイアウト -->
+		<encoder>
+			<pattern>次のSQLが実行されました\n　　%msg</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="jdbc.audit" additivity="false" level="off">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="jdbc.resultset" additivity="false" level="off">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="jdbc.sqlonly" additivity="false" level="info">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="jdbc.sqltiming" additivity="false" level="off">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="jdbc.connection" additivity="false" level="off">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="log4jdbc.debug" additivity="false" level="off">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<!-- ログ出力に関する設定 -->
+	<root>
+		<!-- 出力するレベルを設定 -->
+		<level value="info" />
+
+		<!-- アペンダを設定 -->
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
